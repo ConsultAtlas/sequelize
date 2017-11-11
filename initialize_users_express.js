@@ -23,9 +23,9 @@ app.get('/users', (request, response) => {
 })
 
 
-app.post('/users', (request, response) => {
+app.post('/users/create', (request, response) => {
   // creating a new user
-  let newUser = request.bodyParser
+  let newUser = request.body
   User.create(
     newUser
   ).then((results) => {
